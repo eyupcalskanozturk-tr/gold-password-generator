@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Şifre Oluşturucu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <h1>🔑 Şifre Oluşturucu</h1>
+
+    <div class="settings">
+      <label>Uzunluk: <span id="lengthValue">12</span></label>
+      <input type="range" id="length" min="4" max="30" value="12">
+
+      <label>Zorluk Seviyesi:</label>
+      <select id="difficulty" class="styled-select">
+        <option value="easy">Kolay</option>
+        <option value="medium" selected>Orta</option>
+        <option value="hard">Zor</option>
+      </select>
+    </div>
+
+    <div class="output">
+      <input type="text" id="password" readonly>
+      <button id="copy">📋</button>
+    </div>
+
+    <button id="generate">✨ Oluştur ✨</button>
+
+    <div class="history">
+      <h3>📜 Şifre Geçmişi</h3>
+      <ul id="historyList"></ul>
+    </div>
+
+    <a href="index.html" class="back">⬅️ Ana Menü</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

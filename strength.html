@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Şifre Güç Testi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <h1>🧠 Şifre Güç Testi</h1>
+
+    <input type="password" id="userPassword" placeholder="Şifreni buraya yaz...">
+    <button id="checkBtn">Test Et</button>
+
+    <div id="result" class="result-box">🔍 Şifre gücünü test etmek için yaz...</div>
+
+    <a href="index.html" class="back">⬅️ Ana Menü</a>
+  </div>
+
+  <script>
+    const btn = document.getElementById("checkBtn");
+    const result = document.getElementById("result");
+
+    btn.addEventListener("click", () => {
+      const pass = document.getElementById("userPassword").value;
+      let score = 0;
+      if (pass.length >= 8) score++;
+      if (/[A-Z]/.test(pass)) score++;
+      if (/[a-z]/.test(pass)) score++;
+      if (/[0-9]/.test(pass)) score++;
+      if (/[^A-Za-z0-9]/.test(pass)) score++;
+
+      const levels = [
+        { text: "❌ Çok Zayıf", color: "#ff4d4d" },
+        { text: "⚠️ Zayıf", color: "#ff9800" },
+        { text: "💡 Orta", color: "#ffd54f" },
+        { text: "💪 Güçlü", color: "#9ccc65" },
+        { text: "🔥 Çok Güçlü", color: "#00e676" },
+      ];
+
+      const level = levels[score - 1] || levels[0];
+      result.textContent = `Sonuç: ${level.text}`;
+      result.style.color = "#000";
+      result.style.background = level.color;
+      result.style.boxShadow = `0 0 15px ${level.color}`;
+      result.style.border = "none";
+      result.style.transform = "scale(1.1)";
+      setTimeout(() => (result.style.transform = "scale(1)"), 300);
+    });
+  </script>
+</body>
+</html>

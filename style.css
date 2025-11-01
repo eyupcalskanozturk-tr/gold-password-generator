@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  background: #0d0d0d;
+  color: gold;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.wrapper, .intro-container {
+  background: #111;
+  border: 1.5px solid gold;
+  border-radius: 18px;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.25);
+  padding: 30px;
+  width: 350px;
+  text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+h1 {
+  margin-bottom: 15px;
+  color: gold;
+  text-shadow: 0 0 12px rgba(255, 215, 0, 0.7);
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #d4af37;
+  margin-bottom: 20px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.menu-btn {
+  background: gold;
+  color: #111;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.menu-btn:hover {
+  background: #ffec80;
+  transform: scale(1.03);
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: gold;
+}
+
+.styled-select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid gold;
+  background: #1a1a1a;
+  color: gold;
+  font-weight: 600;
+  outline: none;
+  transition: 0.3s;
+  appearance: none;
+}
+
+.styled-select:hover {
+  background: #222;
+}
+
+.styled-select option {
+  background: #1a1a1a;
+  color: gold;
+  font-weight: 600;
+}
+
+.output {
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+input[type="text"], input[type="password"] {
+  flex: 1;
+  background: #000;
+  border: 1px solid gold;
+  border-radius: 10px;
+  color: gold;
+  padding: 8px;
+  text-align: center;
+  font-weight: 600;
+}
+
+button {
+  background: gold;
+  border: none;
+  border-radius: 10px;
+  color: #111;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ffec80;
+}
+
+.history {
+  background: rgba(255, 215, 0, 0.08);
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #f1f1f1;
+  font-size: 14px;
+}
+
+.result-box {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid gold;
+  background: rgba(255,215,0,0.1);
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.back {
+  display: inline-block;
+  margin-top: 15px;
+  color: gold;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
